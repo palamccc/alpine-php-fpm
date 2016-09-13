@@ -1,5 +1,5 @@
 FROM alpine:edge
-RUN apk add --no-cache php7-mysqli php7-fpm php7-zlib \
+RUN apk add --no-cache php7-mysqli php7-fpm php7-zlib php7-session \
     && { \
       echo '[global]'; \
       echo 'error_log = /proc/self/fd/2'; \
