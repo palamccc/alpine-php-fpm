@@ -6,6 +6,7 @@ RUN apk add --no-cache \
       php7-mysqli \
       php7-opcache \
       php7-session \
+      php7-zip \
       php7-zlib \
     && { \
       echo '[global]'; \
