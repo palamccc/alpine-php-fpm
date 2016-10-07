@@ -21,6 +21,10 @@ RUN apk add --no-cache \
       echo 'pm.min_spare_servers = 1'; \
       echo 'pm.max_spare_servers = 3'; \
       echo 'catch_workers_output = yes'; \
-    } > /etc/php7/php-fpm.d/www.conf
+    } > /etc/php7/php-fpm.d/www.conf \
+    && { \
+      echo 'upload_max_filesize=20M'; \
+      echo 'post_max_size=20M'; \
+    } > /etc/php7/conf.d/01_upload.ini
 EXPOSE 9000
 CMD ["php-fpm7"]
