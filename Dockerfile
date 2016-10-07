@@ -23,8 +23,8 @@ RUN apk add --no-cache \
       echo 'catch_workers_output = yes'; \
     } > /etc/php7/php-fpm.d/www.conf \
     && { \
-      echo 'upload_max_filesize=20M'; \
-      echo 'post_max_size=20M'; \
+      echo 'upload_max_filesize=35M'; \
+      echo 'post_max_size=35M'; \
     } > /etc/php7/conf.d/01_upload.ini
 EXPOSE 9000
 CMD ["php-fpm7"]
