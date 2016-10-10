@@ -1,5 +1,6 @@
 FROM alpine:edge
 RUN apk add --no-cache \
+      php7 \
       php7-curl \
       php7-dom \
       php7-fpm \
